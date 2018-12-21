@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-md-offset-10 col-md-2">
+    <a [routerLink]="['/students/create']">Create Student</a>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Last name</th>
+            <th>First name</th>
+            <th>Email</th>
+            <th>Date of birth</th>
+            <th>Details</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <td>{{student.lastName}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.dateOfBirth | date: 'dd/MM/yyyy'}}</td>
+            <td><button type="button" id="details" class="btn btn-default"
+              (click)="redirectToDetailsPage(student)">Details</button></td>
+            <td><button type="button" id="update" class="btn btn-success"
+              (click)="redirectToUpdatePage(student)" >Update</button></td>
+            <td><button type="button" id="delete" class="btn btn-danger"
+              (click)="deleteStudent(student)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

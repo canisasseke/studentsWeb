@@ -1,0 +1,13 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">Home</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a [routerLink]="['/students/list']" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">Students</a></li>
+      <li><a href="#">Account Actions</a></li>
+    </ul>
+  </div>
+</nav>
